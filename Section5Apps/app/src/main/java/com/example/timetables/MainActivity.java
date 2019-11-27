@@ -51,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
         // this means the seek bar when the app is loaded, will start
         // at 10
         timesTablesSeekBar.setProgress(10);
+        /*
+        * adding event listener to it
+        * The trick is to, after writing the setOnSeekBar, in the bracket just type new SeekBar, the android
+        * studio will show some suggestion, hit enter and it will create the three functions automatically for us
+        * 
+        */
 
         timesTablesSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
