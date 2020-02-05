@@ -25,6 +25,18 @@
      * https://www.udemy.com/course/the-complete-android-oreo-developer-course/learn/lecture/8339470?start=1020#questions
      * Watch from 26:00 that explains how the app works
      */
+    /*
+     * make sure the internet is on on the simulator
+     * For any internet stuff to work, we need to config the mainfest file to
+     * ask permission from the user to connect to the url
+     * https://www.udemy.com/course/the-complete-android-oreo-developer-course/learn/lecture/8339458?start=0#questions
+     * Watch from 21:24
+     */
+    // AsyncTask means all the tasks will be happening in background
+    /*
+     * https://www.udemy.com/course/the-complete-android-oreo-developer-course/learn/lecture/8339458?start=0#questions
+     * Watch from 4:40 to see what that string,void,string does
+     */
     package com.example.guessthecelebrity;
 
     import androidx.appcompat.app.AppCompatActivity;
