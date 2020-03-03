@@ -10,7 +10,7 @@
  * it to the location listener
  * 5. Then finally use the location listener in line 107, here the function at line 111 is particularly interesting, as it gets fired any time the system sends update to the app
  * 6. To put a marker look at line 124
- * 7.If we wanna use geocoder to convert a location to human readable address, line 132
+ * 7. If we wanna use geocoder to convert a location to human readable address, line 132
  *
  *
  */
@@ -164,8 +164,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         }
 
                         // this gives us zip code
-                        if (listAddresses.get(0).getPostalCode() != null){
-                            address += listAddresses.get(0).getPostalCode()+" ";
+                        if (listAddresses.get(0).getPostalCode() != null) {
+                            address += listAddresses.get(0).getPostalCode() + " ";
                         }
 
                         // this gives us state/province
@@ -174,8 +174,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         }
 
                         Toast.makeText(MapsActivity.this, address, Toast.LENGTH_SHORT).show();
-
-
 
 
                     }
@@ -221,8 +219,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
              * here we are seeing that if we didn't get permission, we need to ask for it
              */
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // here we are asking for permission if permission is not granted
-                // 1 means we are assigning code 1 to this request, it could be any number
+                /*
+                 * here we are asking for permission if permission is not granted
+                 * 1 means we are assigning code 1 to this request, it could be any number, if permission is granted, then
+                 * onRequestPermissionsResult will run and receive requestCode 1, which signifies this function was run
+                 * as the user gave permission to access fine location
+                 */
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
             } else {
                 // this else part is if the user already gave us the permission, which will happen when the app runs for first time and user gives permission
