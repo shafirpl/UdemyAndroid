@@ -3,9 +3,9 @@
  * the manifest.xml file
  * To get the location and use it,
  * 1. we need location manager to get the location, and location listener to use it
- * 2. Afterwards we need to ask for permission (around line 141-142) if its above android 6, as from android 6 we need permission from user to use
+ * 2. Afterwards we need to ask for permission (around line 206-207) if its above android 6, as from android 6 we need permission from user to use
  * gps and other stuff, and assign a request code that we will use in step 3 to ensure that this permission was for GPS, nothing else
- * 3. Then line 47, which gets triggered as soon as user grants permission to anything,
+ * 3. Then line 55, which gets triggered as soon as user grants permission to anything,
  * 4. Then  call this.locationManager.requestLocationUpdates() inside step 3 function to set up the location manager to send location updates to the app, and connect
  * it to the location listener
  * 5. Then finally use the location listener in line 107, here the function at line 111 is particularly interesting, as it gets fired any time the system sends update to the app
