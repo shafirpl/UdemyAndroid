@@ -1,0 +1,1 @@
+This memorable place app has added shared preference for storing the places we add
